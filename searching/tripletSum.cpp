@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-
+//0(n^2)
 int main(){
 
 int A[] = { 1, 4, 45, 6, 10, 8 }; 

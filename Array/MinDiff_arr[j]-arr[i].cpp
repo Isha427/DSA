@@ -13,3 +13,4 @@ int main()
        cout<<res;
        return 0;
 }
+ int arr[9] = {5, 9, 2, 9, 9, 3, 0, 1, 3};

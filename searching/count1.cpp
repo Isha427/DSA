@@ -14,14 +14,22 @@ int countones(int arr[],int n)
                         high=mid-1;
                      }
                      else{
-                            if(mid==0||)
+                            if(mid==0||arr[mid-1]!=1)
+                            {
+                                   return n-mid;
+                            }
+                            else{
+                                   high=mid-1;
+                            }
                      }
               }
+
        }
+       return -1;
 }
 int main(){
   int arr[] = {0, 0, 1, 1, 1, 1}, n = 6;
 
-   cout << countOnes(arr, n);
+   cout << countones(arr, n);
   return 0;
 }

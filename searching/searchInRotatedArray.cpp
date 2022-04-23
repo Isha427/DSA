@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
+//revise it
 int searches(int arr[],int n,int x)
 {
        int high=n-1;
