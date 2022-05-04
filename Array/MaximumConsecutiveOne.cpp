@@ -10,9 +10,13 @@ int main()
               {
                      c++;
                       ans=max(c,ans);
+              
               }
+                     
               else{
-                     c=0;
+                      
+                     
+                      c=0;
               }
        }
        cout<<ans;
