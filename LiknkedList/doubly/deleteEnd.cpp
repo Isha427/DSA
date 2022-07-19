@@ -28,8 +28,8 @@ node *deleted(node *head)
               temp=temp->next;
 
        }
-       temp->next=NULL;
        delete(temp->next);
+       temp->next=NULL;
        return head;
 
 

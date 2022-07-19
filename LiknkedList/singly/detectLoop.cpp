@@ -10,40 +10,31 @@ struct node
               next = NULL;
        }
 };
-void traverse(node *head)
+
+bool detect(node *head)
 {
+       unordered_set<node *> s;
        node *temp = head;
        while (temp != NULL)
        {
-              cout << temp->data << "\n";
+              if (s.find(temp) != s.end())
+              {
+                     return 1;
+                     cout << temp->data;
+              }
+              s.insert(temp);
               temp = temp->next;
        }
-}
-node *deletes(node *head)
-{
-       if (head == NULL)
-       {
-              return NULL;
-       }
-       node *temp = head;
-       while(temp->next->next!=NULL)
-       {
-              temp=temp->next;
-
-       }
-       delete(temp->next);
-       temp->next=NULL;
-       return head;
-
-      
+       return 0;
 }
 int main()
 {
        node *head = new node(20);
        head->next = new node(30);
        head->next->next = new node(40);
-       head = deletes(head);
-       traverse(head);
+       head->next->next->next = head;
+
+       cout << detect(head);
 
        return 0;
 }
