@@ -1,21 +1,30 @@
-#include <bits/stdc++.h>
-using namespace std;
-int main(){
-  string st="abbbca";
-   bool visited[256];
-   fill(visited,visited+256,false);
-   int res=0;
-   for(int i=st.length()-1;i>=0;i--)
-   {
-       if(visited[st[i]]==true)
-       {
-              res=i;
-       }
-       else{
-             visited[st[i]]=true; 
-       }
-   }
-   cout<<st[res];
-   
-  return 0;
+#include <bits/stdc++.h> 
+using namespace std; 
+
+const int CHAR=256;
+int nonRep(string &str) 
+{
+    int fI[CHAR];
+    fill(fI,fI+CHAR,-1);
+    
+    for(int i=0;i<str.length();i++){
+        if(fI[str[i]]==-1)
+        fI[str[i]]=i;
+        else
+        fI[str[i]]=-2;
+    }
+    int res=INT_MAX;
+    for(int i=0;i<CHAR;i++){
+        if(fI[i]>=0)res=min(res,fI[i]);
+    }
+    return (res==INT_MAX)?-1:res;
 }
+ 
+int main() 
+{ 
+    string str = "geeksforgeeks";
+    cout<<"Index of leftmost non-repeating element:"<<endl;
+    cout<<nonRep(str)<<endl;  
+    
+    return 0; 
+} 
