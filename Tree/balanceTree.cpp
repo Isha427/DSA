@@ -18,16 +18,16 @@ int balance(Node * root)
         return 0;
     }
     int lh=(balance(root->left));
-    if(lh<=-1)
+    if(lh==-1)
     {
         return -1;
     }
     int rh=(balance(root->right));
-    if(rh<=-1)
+    if(rh==-1)
     {
         return -1;
     }
-    if(abs(lh-rh)<-1)
+    if(abs(lh-rh)>1)
     {
          return -1;
     }
