@@ -20,24 +20,16 @@ using namespace std;
 // } //time 0(n),space o(n);
 
 //Efficient
-int repeat(int arr[0],int n)
+int repeat(int arr[],int n)
 {
-       	int slow = arr[0], fast = arr[0];
-
-	do{
-		slow = arr[slow];
-		fast = arr[arr[fast]];
-	
-	}while(slow != fast);
-	
-	slow = arr[0];
-
-	while(slow != fast)
-	{
-		slow = arr[slow];
-		fast = arr[fast];
-	}
-	return slow;
+       	sort(arr,arr+n);
+		for(int i=1;i<n;i++)
+		{
+			if(arr[i]==arr[i-1])
+			{
+				return i;
+			}
+		}
 
 
 }

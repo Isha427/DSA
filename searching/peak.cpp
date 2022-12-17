@@ -36,7 +36,7 @@ int peak(int arr[],int n)
        }
 }
 int main(){
-  int arr[] = {5, 10, 7, 8, 20, 12}, n = 6;
+  int arr[] = {1,2}, n = 2;
  cout << peak(arr, n);
   return 0;
 }

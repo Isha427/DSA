@@ -1,5 +1,3 @@
-//tc=O(n)
-//sc=O(h)
 #include <bits/stdc++.h>
 using namespace std;
 struct Node{
@@ -12,13 +10,24 @@ struct Node{
               right=NULL;
        }
 };
-void postorder(Node * root)
-{
-       if(root!=NULL)
+void inorder(Node * root)
+{       stack<Node*>s;
+       
+       while(root!=NULL ||s.empty()==false)
        {
-              cout<<root->key<<" ";
-              postorder(root->left);
-              postorder(root->right);
+              while(root!=NULL)
+              {      s.push(root);
+                     root=root->left;
+
+              
+              }
+              
+              cout<<s.top()->key<<" ";
+              
+              root=s.top()->right;
+              s.pop();
+              
+
        }
 }
 int main(){
@@ -27,6 +36,6 @@ int main(){
   root->right=new Node(40);
   root->left->left=new Node(50);
   root->left->right=new Node(60);
-  postorder(root);
+  inorder(root);
   return 0;
 }

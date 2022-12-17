@@ -36,10 +36,10 @@ int searches(int arr[],int n,int x)
 }//o(logn)
 int main(){
   
-       int arr[] = {100, 200, 10, 20, 30,40};
+       int arr[] = {3,1};
 
-       int x = 100;
-       int n=6;
+       int x = 1;
+       int n=2;
 
        cout << searches(arr,n, x);
   return 0;
