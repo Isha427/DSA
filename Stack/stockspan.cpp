@@ -20,8 +20,8 @@ printSpan(int arr[], int n)
 }
 int main()
 {
-       int arr[] = {18, 12, 13, 14, 11, 16};
-       int n = 6;
+       int arr[] = {100,80,60,70,60,75,85};
+       int n = 7;
        printSpan(arr, n);
        return 0;
       

@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 int main()
-{ int arr[] = {5,0,6,2,3}, n = 5;
+{ int arr[] = {4,2,3}, n = 3;
     int res=0;
     int lmax[n],rmax[n];
 
