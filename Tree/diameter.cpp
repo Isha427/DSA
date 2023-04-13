@@ -14,14 +14,14 @@ struct Node
 };
 int diameter(Node *root)
 {
-       int res = 0;
+       // int res = 0;
        if (root == NULL)
        {
               return 0;
        }
        int lh = diameter(root->left);
        int rh = diameter(root->left);
-       res = max(lh + rh + 1, res);
+       // res = max(lh + rh + 1, res);
        return 1 + max(lh, rh);
 }
 int main()
@@ -31,6 +31,7 @@ int main()
        root->right = new Node(60);
        root->left->left = new Node(80);
        root->left->right = new Node(70);
+       root->right->left = new Node(100);
        cout << diameter(root);
        return 0;
 }

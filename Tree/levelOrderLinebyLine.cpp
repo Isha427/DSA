@@ -20,7 +20,10 @@ void levelOrder(Node * root){
        while(q.size()>1){
        Node * curr=q.front();
        q.pop();
-       if(curr==NULL){cout<<"\n";q.push(NULL);continue;}
+       if(curr==NULL){
+       cout<<"\n";
+       q.push(NULL);
+       continue;}
        cout<<curr->key<<" ";
        if(curr->left!=NULL){q.push(curr->left);}
        if(curr->right!=NULL){q.push(curr->right);}

@@ -56,11 +56,11 @@ void preorder(Node *root)
 }
 int main()
 {
-       Node *root = new Node(20);
-       root->left = new Node(30);
-       root->right = new Node(40);
-       root->left->left = new Node(50);
-       root->left->right = new Node(60);
+       Node *root = new Node(1);
+       root->left = new Node(2);
+       root->right = new Node(3);
+       root->right->left = new Node(4);
+       root->right->right = new Node(5);
        vector<int> v;
        serialize(root,v);
          for(int i=0;i<v.size();i++)
